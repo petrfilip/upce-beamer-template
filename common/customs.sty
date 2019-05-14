@@ -1,0 +1,24 @@
+\usepackage{amssymb}
+\usepackage{pifont}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\newcommand\fullscreenFrameImage[2][height=\paperheight]{%
+\begin{frame}[plain]
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+2cm\relax}
+  \raggedright
+  \colorbox{white} {
+    \makebox[\linewidth]{\includegraphics[#1]{#2}}
+    }
+  \end{minipage}%
+  }%
+  \end{frame}
+}
+
+\newcommand<>{\fullsizegraphic}[1]{
+  \begin{textblock*}{0cm}(-1cm,-3.78cm)
+  \includegraphics[width=\paperwidth]{#1}
+  \end{textblock*}
+}
