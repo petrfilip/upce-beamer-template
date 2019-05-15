@@ -1,5 +1,7 @@
+% !TeX spellcheck = cs_CZ
+
 \documentclass{beamer}
-\usepackage[FEI]{common/beamerthemeUpceFei}
+\usepackage[DFJP]{common/beamerthemeUpceFei}
 \usepackage{common/code}
 \usepackage{common/customs}
 
@@ -162,6 +164,42 @@ Forward & FW & Jamie McMaster \\ \hline
       some text here some text here some text here some text here some text here
      \end{center}
 \end{column}
+\end{columns}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, shrink=20]{Dlouhý, ale velmi dlouhý nadpis, který se nevejde na jeden řádek}
+
+
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Položka
+			\begin{itemize}
+				\item položka
+				\item \textbf{tučně}
+			\end{itemize}
+		\end{itemize}
+		\includegraphics[width=\linewidth]{images/idea-app-configuration.png} 
+		
+		some text here some text here some text here some text here some text here
+	\end{column}
+	\begin{column}{0.5\textwidth}  
+		\begin{center}
+			\begin{itemize}
+				\item Položka
+				\begin{itemize}
+					\item položka
+					\item \textbf{tučně}
+				\end{itemize}
+			\end{itemize}
+			
+			\includegraphics[width=\linewidth]{images/idea-app-configuration.png} 
+			
+			some text here some text here some text here some text here some text here
+		\end{center}
+	\end{column}
 \end{columns}
 
 
