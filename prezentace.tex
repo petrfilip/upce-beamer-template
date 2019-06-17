@@ -1,4 +1,5 @@
-\documentclass{beamer}							% pro poměr stran 16:9 použijte \documentclass[smaller,aspectratio=169]{beamer}	
+% !TeX spellcheck = cs_CZ
+\documentclass{beamer}							% pro poměr stran 16:9 použijte \documentclass[smaller,aspectratio=169]{beamer}
 
 \usepackage[upce]{common/beamerthemeUpceFei} 	% základní styly
 \usepackage{common/code} 						% formátování zdrojových kódů
@@ -45,7 +46,7 @@
 			      \item položka
 			      \begin{itemize}
 					\item další položka
-				
+
 				\end{itemize}
 		      \end{itemize}
 			\item druhý řádek
@@ -147,11 +148,11 @@ Forward & FW & Jamie McMaster \\ \hline
 			      \item \textbf{tučně}
 		      \end{itemize}
 	\end{itemize}
-   \includegraphics[width=\linewidth]{images/idea-app-configuration.png} 
-   
+   \includegraphics[width=\linewidth]{images/idea-app-configuration.png}
+
     some text here some text here some text here some text here some text here
 \end{column}
-\begin{column}{0.5\textwidth}  
+\begin{column}{0.5\textwidth}
     \begin{center}
       \begin{itemize}
 		\item Položka
@@ -160,12 +161,48 @@ Forward & FW & Jamie McMaster \\ \hline
 			      \item \textbf{tučně}
 		      \end{itemize}
 	\end{itemize}
-     
-     \includegraphics[width=\linewidth]{images/idea-app-configuration.png} 
-     
+
+     \includegraphics[width=\linewidth]{images/idea-app-configuration.png}
+
       some text here some text here some text here some text here some text here
      \end{center}
 \end{column}
+\end{columns}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, shrink=20]{Dlouhý, ale velmi dlouhý nadpis, který se nevejde na jeden řádek}
+
+
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\begin{itemize}
+			\item Položka
+			\begin{itemize}
+				\item položka
+				\item \textbf{tučně}
+			\end{itemize}
+		\end{itemize}
+		\includegraphics[width=\linewidth]{images/idea-app-configuration.png}
+
+		some text here some text here some text here some text here some text here
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\begin{center}
+			\begin{itemize}
+				\item Položka
+				\begin{itemize}
+					\item položka
+					\item \textbf{tučně}
+				\end{itemize}
+			\end{itemize}
+
+			\includegraphics[width=\linewidth]{images/idea-app-configuration.png}
+
+			some text here some text here some text here some text here some text here
+		\end{center}
+	\end{column}
 \end{columns}
 
 
@@ -212,11 +249,11 @@ Forward & FW & Jamie McMaster \\ \hline
 			\item \textcolor{dfjp}{DFJP}
 			\item \textcolor{fei}{FEI}
 			\item \textcolor{fzs}{FZS}
-			\item \textcolor{ff}{FF} 
-			\item \textcolor{fr}{FR} 
+			\item \textcolor{ff}{FF}
+			\item \textcolor{fr}{FR}
 		\end{itemize}
 
-		\item Definice barev: \url{http://latexcolor.com/} 
+		\item Definice barev: \url{http://latexcolor.com/}
 	\end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
