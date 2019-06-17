@@ -1,29 +1,29 @@
-\documentclass{beamer}
-\usepackage[FEI]{common/beamerthemeUpceFei}
-\usepackage{common/code}
-\usepackage{common/customs}
+\documentclass{beamer}							% pro poměr stran 16:9 použijte \documentclass[smaller,aspectratio=169]{beamer}	
 
-\graphicspath{{images/}} % zde jsou umístěny obrázky
+\usepackage[upce]{common/beamerthemeUpceFei} 	% základní styly
+\usepackage{common/code} 						% formátování zdrojových kódů
+\usepackage{common/customs} 					% vlastní příkazy (například obrázek na celou obrazovku)
+\usepackage[czech]{babel}						% balíček typografických pravidel jazyka. Můžete využít i "english" místo "czech".
+
+\graphicspath{{images/}} 						% zde jsou umístěny obrázky
 
 \author{Jan Novák}	
 \title{Jednoduchá prezentace}
 %\institute{Univerzita Pardubice}
-\date{Září 18, 2020} %pokud se zakomentuje, vloží se datum posledního uložení, ale anglicky
+%\date{Září 18, 2020} 							%pokud se zakomentuje, vloží se datum posledního uložení
 
 \begin{document}
 \maketitle
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%          ZDE ZAČÍNÁ DOKUMENT       %%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Textová sekce}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile, shrink=0]{Seznamy}
-
-
 
 	\begin{itemize}
 		\item položka
@@ -43,6 +43,10 @@
 			      \item položka
 			      \item položka
 			      \item položka
+			      \begin{itemize}
+					\item další položka
+				
+				\end{itemize}
 		      \end{itemize}
 			\item druhý řádek
 			  \begin{enumerate}
@@ -198,7 +202,23 @@ Forward & FW & Jamie McMaster \\ \hline
 		\includegraphics[width=\linewidth]{images/tomcat-webapps.png}
 	\end{figure}
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, shrink=0]{Barvy}
+	\begin{itemize}
+		\item \textcolor{upce}{UPCE}
+		\begin{itemize}
+			\item \textcolor{fcht}{FCHT}
+			\item \textcolor{fes}{FES}
+			\item \textcolor{dfjp}{DFJP}
+			\item \textcolor{fei}{FEI}
+			\item \textcolor{fzs}{FZS}
+			\item \textcolor{ff}{FF} 
+			\item \textcolor{fr}{FR} 
+		\end{itemize}
 
+		\item Definice barev: \url{http://latexcolor.com/} 
+	\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile, shrink=0]{Obrázkovo-tabulkový slajd}
 	\begin{itemize}
@@ -216,6 +236,18 @@ Forward & FW & Jamie McMaster \\ \hline
 		Struktura projektu                                               & Dashboard                                                                     \\
 		\includegraphics[width=4.5cm]{images/idea-project-structure.png} & \includegraphics[width=4.5cm]{images/idea-spring-boot-dashboard.png}          \\
 	\end{tabular}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\zmensi{Slajd s veeeelmi dlouhým nadpisem, který se normálně nevejde na jeden řádek}}
+	\begin{itemize}
+		\item bin/startup.sh -- spuštění
+		\item conf -- konfigurace
+		\item webapps -- místo pro webové aplikace
+	\end{itemize}
+
+	\begin{figure}[htp]
+		\includegraphics[width=\linewidth]{images/tomcat-webapps.png}
+	\end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Obrázek na celou stránku}

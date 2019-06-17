@@ -44,63 +44,81 @@
 % define colours
 % taken from pickton on Adobe Kuler:
 % https://kuler.adobe.com/Some-Kind-Of-Execushares-color-theme-3837185/
-\definecolor{ExecusharesRed}{RGB}{237,28,36} %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{237,28,36} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\newcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-fei}}
+\definecolor{upce}{HTML}{DE1B2D}	% červená univerzitní barva	
+\definecolor{fcht}{HTML}{A40450}	% FCHT barva
+\definecolor{fes}{HTML}{209447}		% FES barva	
+\definecolor{dfjp}{HTML}{0047BA}	% DFJP barva	
+\definecolor{fei}{HTML}{0E95AC}		% FEI barva	
+\definecolor{fzs}{HTML}{0B8ED5}		% FZS barva	
+\definecolor{ff}{HTML}{C4920B}		% FF barva	
+\definecolor{fr}{HTML}{6C3729}		% FR barva	
+
+\newcommand{\logoupce}{\includegraphics[width=2.5cm]{common/logo-upce}}
+\newcommand{\logofcht}{\includegraphics[width=2.5cm]{common/logo-fcht}}
+\newcommand{\logofes}{\includegraphics[width=2.5cm]{common/logo-fes}}
+\newcommand{\logodfjp}{\includegraphics[width=2.5cm]{common/logo-dfjp}}
+\newcommand{\logofei}{\includegraphics[width=2.5cm]{common/logo-fei}}
+\newcommand{\logofzs}{\includegraphics[width=2.5cm]{common/logo-fzs}}
+\newcommand{\logoff}{\includegraphics[width=2.5cm]{common/logo-ff}}
+\newcommand{\logofr}{\includegraphics[width=2.5cm]{common/logo-fr}}
 
 
-\DeclareOptionBeamer{FCHT}{
-\definecolor{ExecusharesRed}{HTML}{B8274A} %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{237,28,36} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-fcht}}
-}
-\DeclareOptionBeamer{FES}{
-\definecolor{ExecusharesRed}{HTML}{25AA3A} %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{237,28,36} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-fes}}
-}
-\DeclareOptionBeamer{DFJP}{
-\definecolor{ExecusharesRed}{RGB}{67,69,160} %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{237,28,36} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-dfjp}}
-}
-\DeclareOptionBeamer{FHS}{
-\definecolor{ExecusharesRed}{HTML}{D39800} %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{237,28,36} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-fhs}}
-}
-\DeclareOptionBeamer{FEI}{
-\definecolor{ExecusharesRed}{RGB}{0,169,193}  %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{22,190,207} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-fei}}
-}
-\DeclareOptionBeamer{UZS}{
-\definecolor{ExecusharesRed}{RGB}{76, 157, 197}  %hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} %jméno autora, ...
-\definecolor{ExecusharesBlue}{RGB}{22,190,207} %barva položek seznamů
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} %barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} %datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2cm]{common/logo-uzs}}
-}
+\definecolor{ExecusharesRed}{HTML}{DE1B2D} 			%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\newcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-upce}}
 
+
+\DeclareOptionBeamer{fcht}{
+\colorlet{ExecusharesRed}{upce}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fcht}}
+}
+\DeclareOptionBeamer{fes}{
+\colorlet{ExecusharesRed}{fes}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fes}}
+}
+\DeclareOptionBeamer{dfjp}{
+\colorlet{ExecusharesRed}{dfjp}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-dfjp}}
+}
+\DeclareOptionBeamer{fei}{
+\colorlet{ExecusharesRed}{fei}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fei}}
+}
+\DeclareOptionBeamer{fzs}{
+\colorlet{ExecusharesRed}{fzs}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fzs}}
+}
+\DeclareOptionBeamer{ff}{
+\colorlet{ExecusharesRed}{ff}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255}	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-ff}}
+}
+\DeclareOptionBeamer{fr}{
+\colorlet{ExecusharesRed}{fr}						%hlavní barva
+\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fr}}
+}
 
 
 
@@ -124,10 +142,10 @@
 \usepackage{sourcecodepro}
 
 % set colours
-\setbeamercolor{itemize item}{fg=ExecusharesBlue}
-\setbeamercolor{enumerate item}{fg=ExecusharesBlue}
-\setbeamercolor{local structure}{fg=ExecusharesBlue}
-\setbeamercolor{alerted text}{fg=ExecusharesBlue}
+\setbeamercolor{itemize item}{fg=ExecusharesRed}
+\setbeamercolor{enumerate item}{fg=ExecusharesRed}
+\setbeamercolor{local structure}{fg=ExecusharesRed}
+\setbeamercolor{alerted text}{fg=ExecusharesRed}
 \setbeamercolor{section in toc}{fg=ExecusharesBlack}
 
 % set fonts
@@ -139,13 +157,20 @@
 % make the itemize bullets pixelated >
 \setbeamertemplate{itemize item}{
   \tikz{
-    \draw[fill=ExecusharesBlue,draw=none] (0, 0) rectangle(0.1, 0.1);
-    \draw[fill=ExecusharesBlue,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
-    \draw[fill=ExecusharesBlue,draw=none] (0, 0.2) rectangle(0.1, 0.3);
+    \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.1, 0.1);
+    \draw[fill=ExecusharesRed,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
+    \draw[fill=ExecusharesRed,draw=none] (0, 0.2) rectangle(0.1, 0.3);
   }
 }
 % make the subitems also pixelated >, but a little smaller and red
 \setbeamertemplate{itemize subitem}{
+  \tikz{
+    \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.075, 0.075);
+    \draw[fill=ExecusharesRed,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+    \draw[fill=ExecusharesRed,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+  }
+}
+\setbeamertemplate{itemize subsubitem}{
   \tikz{
     \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.075, 0.075);
     \draw[fill=ExecusharesRed,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
@@ -251,6 +276,7 @@
       %\node[anchor=north,text width=11.8cm,inner xsep=0.5cm,inner ysep=0.25cm] at (6.4cm,9.6cm) {\color{ExecusharesWhite}\Large\textbf{\insertsectionhead: \insertframetitle}};
       
       \node[anchor=north,text width=\slidewidth-1cm,inner xsep=0.5cm,inner ysep=0.25cm] at (0.5\slidewidth,\slideheight) {\color{ExecusharesWhite}\huge\textbf{\insertframetitle}};
+      
 
       
       %\tikz\node[rounded corners, fill={rgb,255:red,21; green,66; blue,128}, text=white, draw=black] {\insertframetitle};
@@ -262,7 +288,7 @@
         \draw[fill=ExecusharesRed,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
 
         % bottom information
-        %%%%%\node[anchor=south west] at(0cm,0.25cm) {\color{ExecusharesGrey}\tiny\vphantom{lp}\insertsection};
+        \node[anchor=south east] at(\slidewidth,-0.13cm) {\color{ExecusharesWhite}\tiny\vphantom{lp}\insertsection};
         % if slide numbers are active
         \ifnum \value{showSlideNumbers}>0\relax%
           % if slide totals are active
