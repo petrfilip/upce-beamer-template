@@ -1,0 +1,36 @@
+\DTLsetpiesegmentcolor{1}{upce}
+\DTLsetpiesegmentcolor{2}{fei}
+\DTLsetpiesegmentcolor{3}{fes}
+\DTLsetpiesegmentcolor{4}{dfjp}
+\DTLsetpiesegmentcolor{5}{fr}
+\DTLsetpiesegmentcolor{6}{ff}
+\DTLsetpiesegmentcolor{7}{fzs}
+\DTLsetpiesegmentcolor{8}{fcht}
+\DTLsetpiesegmentcolor{9}{FFFFFF}
+\DTLsetpiesegmentcolor{10}{000000}
+\setlength{\DTLpieoutlinewidth}{0.0pt}
+
+\usepackage{smartdiagram}
+
+\smartdiagramset{
+bubble center node font = \footnotesize,
+bubble node font = \footnotesize,
+bubble center node size = 0.6cm,
+bubble node size = 0.3cm,
+distance center/other bubbles = 0.6cm,
+distance text center bubble = 0.5cm,
+bubble center node color = upce,
+set color list = {fei, fes, fr, ff, fzs, fcht, dfjp},
+bubble fill opacity = 1,
+bubble text opacity = 1
+}
+
+\tikzset{
+bubble center node/.append style={text=white},
+bubble node/.append style={text=white}
+}
+
+\tikzset{
+clockwise center node/.append style={text=white},
+clockwise node/.append style={text=white}
+}

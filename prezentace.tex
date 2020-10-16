@@ -5,8 +5,13 @@
 \usepackage{common/beamerthemeUpceFei} 			% základní beamer styly
 \usepackage{common/code} 						% formátování zdrojových kódů
 \usepackage{common/customs} 					% vlastní příkazy (například obrázek na celou obrazovku)
-\usepackage[czech]{babel}						% balíček typografických pravidel jazyka. Můžete využít i "english" místo "czech".
 
+\usepackage[czech]{babel}						% balíček typografických pravidel jazyka. Můžete využít i "english" místo "czech".
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{smartdiagram}
+\usepackage{datapie}
+\usepackage{common/chart}
 \graphicspath{{images/}} 						% zde jsou umístěny obrázky
 
 \author{Jan Novák}	
@@ -241,7 +246,7 @@ Forward & FW & Jamie McMaster \\ \hline
 	\end{figure}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile, shrink=0]{Barvy}
+\begin{frame}[fragile, shrink=0]{Barvy UPCE}
 	\begin{itemize}
 		\item \textcolor{upce}{UPCE}
 		\begin{itemize}
@@ -256,6 +261,19 @@ Forward & FW & Jamie McMaster \\ \hline
 
 		\item Definice barev: \url{http://latexcolor.com/}
 	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Loga}
+\begin{center}
+\begin{tabular}{lll}
+	 \logofes	& 	\logofei[width=3cm] 	& \logodfjp \\
+	
+	\logofcht 	&	\logoupce[width=5cm] 	&  \logofzs \\
+	
+	\logoff 	&	\logofr \\
+\end{tabular}
+\end{center}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile, shrink=0]{Obrázkovo-tabulkový slajd}
@@ -291,6 +309,148 @@ Forward & FW & Jamie McMaster \\ \hline
 \begin{frame}{Obrázek na celou stránku}
 	%použít paperwidth nebo paperheight
 	\makebox[\linewidth]{\includegraphics[width=\paperheight]{images/architecture.png}}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Graf I.}
+\begin{center}
+	\smartdiagram[circular diagram:clockwise]{Stáhnout, Pochopit, Upravit, Publikovat}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Graf I.}
+\begin{center}
+\smartdiagram[bubble diagram]{
+    \textbf{UPCE},
+    \textbf{FEI}, \textbf{FES}, \textbf{FR}, \textbf{FR}, \textbf{FZS}, \textbf{FCHT}, \textbf{DFJP}
+}
+
+\end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Graf II.}
+
+\begin{filecontents}{test.csv}
+Name,Quantity
+"FEI",30
+"FES",25
+"FZS",40.5
+"FF",34.5
+"DFJP",20
+\end{filecontents}
+
+\DTLloaddb{fruit}{test.csv} % možnost načítat z csv souboru
+
+\begin{figure}[htbp]
+\centering
+\DTLpiechart{
+variable=\quantity,
+outerlabel=\name,
+innerlabel={\color{white}\DTLpiepercent\%}
+}{fruit}{\name=Name,\quantity=Quantity}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Graf III.}
+
+\begin{tikzpicture}
+    \begin{axis}[
+        width  = \textwidth,
+        height = 6cm,
+        major x tick style = transparent,
+        ybar=2*\pgflinewidth,
+        bar width=10pt,
+        ymajorgrids = true,
+        ylabel = {Average query duration (ms)},
+        symbolic x coords={(FTIDX-TX), (IDX-TX), (NOIDX-TX), (FTIDX-NOTX), (IDX-NOTX), (NOIDX-NOTX)},
+        xtick = data,
+        xtick distance=1,
+        x tick label style={rotate=35, anchor=east},
+        scaled y ticks = false,
+        enlarge x limits=0.15,
+        ymin=0,
+        nodes near coords,
+        every node near coord/.append style={rotate=90, anchor=west, font={\small}, /pgf/number format/.cd,precision=0},
+        every outer y axis line/.append style={draw=none},
+    	every y tick/.append style={draw=none},
+        legend columns=2, 
+        legend cell align=left,
+        legend style={
+	        	draw=none,
+                at={(0.5,1.05)},
+                anchor=south east,
+                column sep=1ex
+        }
+    ]
+        \addplot
+        	[style={fei,fill=fei,mark=none}]
+	     	%[
+		    %    error bars/.cd,
+	        %    y dir=both,
+	        %    y explicit relative,
+		    %]
+            coordinates {
+            	((FTIDX-TX),9.97)
+				((IDX-TX),7.88)
+				((NOIDX-TX),9.8)
+				((FTIDX-NOTX),8.65)
+				((IDX-NOTX),7.78)
+				((NOIDX-NOTX),7.01)
+
+
+            };
+
+        \addplot+
+       		[style={upce,fill=upce,mark=none}]
+         	coordinates {
+         		((FTIDX-TX),42.66)
+				((IDX-TX),42.4)
+				((NOIDX-TX),35.02)
+				((FTIDX-NOTX),341.22)
+				((IDX-NOTX),327.45)
+				((NOIDX-NOTX),308.63)
+	
+     	};
+     	
+
+
+     	
+        \legend{MongoDB, MySql}
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Graf IV.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=fei,
+]
+{x^2 - 2*x - 1};
+\addlegendentry{$x^2 - 2x - 1$}
+%Here the blue parabloa is defined
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=upce,
+    ]
+    {x^2 + 2*x + 1};
+\addlegendentry{$x^2 + 2x + 1$}
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Zdrojáková Sekce}
