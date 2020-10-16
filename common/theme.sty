@@ -1,0 +1,91 @@
+
+
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+
+% define colours
+% taken from pickton on Adobe Kuler:
+% https://kuler.adobe.com/Some-Kind-Of-Execushares-color-theme-3837185/
+\definecolor{upce}{HTML}{ED1C24}	% červená univerzitní barva
+\definecolor{fcht}{HTML}{B7124F}	% FCHT barva
+\definecolor{fes}{HTML}{19AE48}		% FES barva
+\definecolor{dfjp}{HTML}{2056AE}	% DFJP barva
+\definecolor{fei}{HTML}{26B8C6}		% FEI barva
+\definecolor{fzs}{HTML}{069AE1}		% FZS barva
+\definecolor{ff}{HTML}{F35C19}		% FF barva
+\definecolor{fr}{HTML}{E4a209}		% FR barva
+
+\definecolor{Black}{HTML}{000000}		% Černá barva
+
+\newcommand{\logoupce}{\includegraphics[width=2.5cm]{common/logo_upce.pdf}}
+\newcommand{\logofcht}{\includegraphics[width=2.5cm]{common/logo_fcht.pdf}}
+\newcommand{\logofes}{\includegraphics[width=2.5cm]{common/logo_fes.pdf}}
+\newcommand{\logodfjp}{\includegraphics[width=2.5cm]{common/logo_dfjp.pdf}}
+\newcommand{\logofei}{\includegraphics[width=2.5cm]{common/logo_fei.pdf}}
+\newcommand{\logofzs}{\includegraphics[width=2.5cm]{common/logo_fzs.pdf}}
+\newcommand{\logoff}{\includegraphics[width=2.5cm]{common/logo_ff.pdf}}
+\newcommand{\logofr}{\includegraphics[width=2.5cm]{common/logo_fr.pdf}}
+
+
+\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
+\newcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_upce.pdf}}
+\newcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_upce.pdf}}
+
+
+\colorlet{MainColor}{upce}           %hlavní barva
+
+
+\DeclareOption{fcht}{
+\colorlet{MainColor}{fcht}           %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_fcht.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_fcht.pdf}}
+
+
+}
+\DeclareOption{fes}{
+\colorlet{MainColor}{fes}            %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_fes.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_fes.pdf}}
+
+}
+\DeclareOption{dfjp}{
+\colorlet{MainColor}{dfjp}           %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_dfjp.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_dfjp.pdf}}
+
+}
+\DeclareOption{fei}{
+
+\colorlet{MainColor}{fei}            %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_fei.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_fei.pdf}}
+
+}
+\DeclareOption{fzs}{
+\colorlet{MainColor}{fzs}            %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_fzs.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_fzs.pdf}}
+
+}
+\DeclareOption{ff}{
+\colorlet{MainColor}{ff}           %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_ff.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_ff.pdf}}
+
+}
+\DeclareOption{fr}{
+\colorlet{MainColor}{fr}           %hlavní barva
+\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo_fr.pdf}}
+\renewcommand{\unilogoPoster}{\includegraphics[width=24cm]{common/logo_fr.pdf}}
+
+}
+
+\definecolor{ExecusharesBlack}{RGB}{43,40,40}     %jméno autora, ...
+\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
+
+
+
+
+
+\DeclareOption*{\PackageWarning{theme}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax

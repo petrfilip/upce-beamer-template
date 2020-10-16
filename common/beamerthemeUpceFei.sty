@@ -40,86 +40,8 @@
 \DeclareOptionBeamer{nopixelitem}{\beamer@pixelitemfalse}
 
 
-% define colours
-% taken from pickton on Adobe Kuler:
-% https://kuler.adobe.com/Some-Kind-Of-Execushares-color-theme-3837185/
-\definecolor{upce}{HTML}{DE1B2D}	% červená univerzitní barva
-\definecolor{fcht}{HTML}{A40450}	% FCHT barva
-\definecolor{fes}{HTML}{209447}		% FES barva
-\definecolor{dfjp}{HTML}{0047BA}	% DFJP barva
-\definecolor{fei}{HTML}{0E95AC}		% FEI barva
-\definecolor{fzs}{HTML}{0B8ED5}		% FZS barva
-\definecolor{ff}{HTML}{C4920B}		% FF barva
-\definecolor{fr}{HTML}{6C3729}		% FR barva
 
-\newcommand{\logoupce}{\includegraphics[width=2.5cm]{common/logo-upce}}
-\newcommand{\logofcht}{\includegraphics[width=2.5cm]{common/logo-fcht}}
-\newcommand{\logofes}{\includegraphics[width=2.5cm]{common/logo-fes}}
-\newcommand{\logodfjp}{\includegraphics[width=2.5cm]{common/logo-dfjp}}
-\newcommand{\logofei}{\includegraphics[width=2.5cm]{common/logo-fei}}
-\newcommand{\logofzs}{\includegraphics[width=2.5cm]{common/logo-fzs}}
-\newcommand{\logoff}{\includegraphics[width=2.5cm]{common/logo-ff}}
-\newcommand{\logofr}{\includegraphics[width=2.5cm]{common/logo-fr}}
-
-
-\definecolor{ExecusharesRed}{HTML}{DE1B2D} 			%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\newcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-upce}}
-
-
-\DeclareOptionBeamer{fcht}{
-\colorlet{ExecusharesRed}{upce}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fcht}}
-}
-\DeclareOptionBeamer{fes}{
-\colorlet{ExecusharesRed}{fes}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fes}}
-}
-\DeclareOptionBeamer{dfjp}{
-\colorlet{ExecusharesRed}{dfjp}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-dfjp}}
-}
-\DeclareOptionBeamer{fei}{
-\colorlet{ExecusharesRed}{fei}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fei}}
-}
-\DeclareOptionBeamer{fzs}{
-\colorlet{ExecusharesRed}{fzs}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fzs}}
-}
-\DeclareOptionBeamer{ff}{
-\colorlet{ExecusharesRed}{ff}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255}	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-ff}}
-}
-\DeclareOptionBeamer{fr}{
-\colorlet{ExecusharesRed}{fr}						%hlavní barva
-\definecolor{ExecusharesBlack}{RGB}{43,40,40} 		%jméno autora, ...
-\definecolor{ExecusharesWhite}{RGB}{255,255,255} 	%barba nadpisů
-\definecolor{ExecusharesGrey}{RGB}{107,110,108} 	%datum, progress bar
-\renewcommand{\unilogo}{\includegraphics[width=2.5cm]{common/logo-fr}}
-}
-
-
+\newcommand{\unilogoTemplate}{\unilogo}
 
 
 
@@ -141,10 +63,10 @@
 \usepackage{sourcecodepro}
 
 % set colours
-\setbeamercolor{itemize item}{fg=ExecusharesRed}
-\setbeamercolor{enumerate item}{fg=ExecusharesRed}
-\setbeamercolor{local structure}{fg=ExecusharesRed}
-\setbeamercolor{alerted text}{fg=ExecusharesRed}
+\setbeamercolor{itemize item}{fg=MainColor}
+\setbeamercolor{enumerate item}{fg=MainColor}
+\setbeamercolor{local structure}{fg=MainColor}
+\setbeamercolor{alerted text}{fg=MainColor}
 \setbeamercolor{section in toc}{fg=ExecusharesBlack}
 
 % set fonts
@@ -156,24 +78,24 @@
 % make the itemize bullets pixelated >
 \setbeamertemplate{itemize item}{
   \tikz{
-    \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.1, 0.1);
-    \draw[fill=ExecusharesRed,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
-    \draw[fill=ExecusharesRed,draw=none] (0, 0.2) rectangle(0.1, 0.3);
+    \draw[fill=MainColor,draw=none] (0, 0) rectangle(0.1, 0.1);
+    \draw[fill=MainColor,draw=none] (0.1, 0.1) rectangle(0.2, 0.2);
+    \draw[fill=MainColor,draw=none] (0, 0.2) rectangle(0.1, 0.3);
   }
 }
 % make the subitems also pixelated >, but a little smaller and red
 \setbeamertemplate{itemize subitem}{
   \tikz{
-    \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.075, 0.075);
-    \draw[fill=ExecusharesRed,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
-    \draw[fill=ExecusharesRed,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+    \draw[fill=MainColor,draw=none] (0, 0) rectangle(0.075, 0.075);
+    \draw[fill=MainColor,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+    \draw[fill=MainColor,draw=none] (0, 0.15) rectangle(0.075, 0.225);
   }
 }
 \setbeamertemplate{itemize subsubitem}{
   \tikz{
-    \draw[fill=ExecusharesRed,draw=none] (0, 0) rectangle(0.075, 0.075);
-    \draw[fill=ExecusharesRed,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
-    \draw[fill=ExecusharesRed,draw=none] (0, 0.15) rectangle(0.075, 0.225);
+    \draw[fill=MainColor,draw=none] (0, 0) rectangle(0.075, 0.075);
+    \draw[fill=MainColor,draw=none] (0.075, 0.075) rectangle(0.15, 0.15);
+    \draw[fill=MainColor,draw=none] (0, 0.15) rectangle(0.075, 0.225);
   }
 }
 \fi
@@ -255,21 +177,21 @@
     \ifnum\thepage=1\relax
       % the title page
       % draw the fills
-      \fill[color=ExecusharesRed] (0, 4cm) rectangle(\slidewidth,\slideheight);
+      \fill[color=MainColor] (0, 4cm) rectangle(\slidewidth,\slideheight);
 
       % draw the actual text
       \node[anchor=south,text width=\slidewidth-1cm,inner xsep=0.5cm] at (0.5\slidewidth,4cm) {\color{ExecusharesWhite}\Huge\textbf{\inserttitle}};
       \node[anchor=north east,text width=\slidewidth-1cm,align=right] at (\slidewidth-0.4cm,4cm) {\color{ExecusharesBlack}\tiny\insertsubtitle};
       \node[above] at(0.5\slidewidth,2.3cm) {\color{ExecusharesBlack}\tiny };
       \node at (0.5\slidewidth,2cm) {\color{ExecusharesBlack}\LARGE\insertauthor};
-      \node at (1.5cm,1cm) {\unilogo};
+      \node at (1.5cm,1cm) {\unilogoTemplate};
 
       % add the date in the corner
       \node[anchor=south east] at(\slidewidth,0cm) {\color{ExecusharesGrey}\tiny\insertdate};
     \else
       % NOT the title page
       % title bar
-      \fill[color=ExecusharesRed] (0, \slideheight-1cm) rectangle(\slidewidth,\slideheight);
+      \fill[color=MainColor] (0, \slideheight-1cm) rectangle(\slidewidth,\slideheight);
 
       % swap the comment on these to add section titles to slide titles
       %\node[anchor=north,text width=11.8cm,inner xsep=0.5cm,inner ysep=0.25cm] at (6.4cm,9.6cm) {\color{ExecusharesWhite}\Large\textbf{\insertsectionhead: \insertframetitle}};
@@ -283,7 +205,7 @@
       \ifnum \value{showProgressBar}>0\relax%
         % the the progress bar icon in the middle of the screen
         \draw[fill=ExecusharesGrey,draw=none] (0cm,0cm) rectangle(\slidewidth,0.25cm);
-        \draw[fill=ExecusharesRed,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
+        \draw[fill=MainColor,draw=none] (0cm,0cm) rectangle(\progressbar@tmpdim,0.25cm);
 
         % bottom information
         \node[anchor=south east] at(\slidewidth,-0.13cm) {\color{ExecusharesWhite}\tiny\vphantom{lp}\insertsection};
@@ -328,7 +250,7 @@
     \useasboundingbox (0,0) rectangle(\slidewidth,\slideheight);
     %\fill[color=ExecusharesWhite] (0,0) rectangle(\the\paperwidth,\the\paperheight);
     \fill[color=ExecusharesWhite] (-1cm, 2cm) rectangle (\slidewidth, \slideheight+0.1cm);
-    \fill[color=ExecusharesRed] (-1cm, 0.5\slideheight-1cm) rectangle(\slidewidth, 0.5\slideheight+1cm);
+    \fill[color=MainColor] (-1cm, 0.5\slideheight-1cm) rectangle(\slidewidth, 0.5\slideheight+1cm);
     \node[text width=\the\paperwidth-1cm,align=center] at (0.4\slidewidth, 0.5\slideheight) {\color{ExecusharesWhite}\Huge\textbf{\insertsection}};
   \end{tikzpicture}
 }
