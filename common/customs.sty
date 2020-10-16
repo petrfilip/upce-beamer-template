@@ -1,5 +1,6 @@
 \usepackage{amssymb}
 \usepackage{pifont}
+\usepackage{fontawesome}
 
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
@@ -25,5 +26,8 @@
 
 \newcommand{\zmensi}[1]{
  	\resizebox{\dimexpr\paperwidth - 3ex}{!}{#1}
- }
- 
+}
+
+\newcommand{\hrefi}[2]{
+ 	\href{#1}{#2 \color{blue}\faExternalLink} 
+} 
