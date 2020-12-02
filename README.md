@@ -1,4 +1,4 @@
-# (NEOFICIÁLNÍ!!!) Šablona prezentace & posteru pro Univerzitu Pardubice 
+# (NEOFICIÁLNÍ!!) Šablona prezentace & posteru pro Univerzitu Pardubice 
 
 
 Prezentace            |  Poster
